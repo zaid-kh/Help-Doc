@@ -47,7 +47,7 @@ export default function Login() {
             <form id="login-form" onSubmit={handleSubmit}>
                 <input
                     ref={email}
-                    type="text"
+                    type="email"
                     name="useremail"
                     id="email-input"
                     placeholder="Email"
@@ -59,7 +59,7 @@ export default function Login() {
                     id="password-input"
                     placeholder="Password"
                 />
-                <a href="">Forgot your password?</a>
+                <a className="forgot-password" href="">Forgot your password?</a>
                 <input type="submit" value="Login" />
             </form>
         </div>
