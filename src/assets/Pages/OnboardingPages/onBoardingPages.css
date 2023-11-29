@@ -3,7 +3,11 @@
     text-align: center;
     width: 375px;
     height: 812px;
-    padding: 108px 11px auto 11px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     
   }
   .container {
@@ -23,6 +27,7 @@
     align-items: center;
     border-radius: 6px;
     border: none;
+    margin: 16px 0;
   }
 
   #nextBtn{
@@ -31,5 +36,5 @@
 
   #skipBtn{
     background-color:#FFF ;
-    color:#0D53FC  ;
+    color:#0D53FC ;
   }
