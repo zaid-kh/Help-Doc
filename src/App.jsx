@@ -1,9 +1,10 @@
 import "./App.css";
+import LoginMain from "./components/Login/LoginMain";
 
 function App() {
   return (
     <>
-      <h1>Help Doc</h1>
+      <LoginMain />
     </>
   );
 }
