@@ -17,8 +17,11 @@ function App() {
 
           {/* <Link to="/auth/login">Login</Link> */}
           <Route path="/auth">
-            <Route path="/auth/login" element={<LoginMain />} />
-            {/* <AuthRoutes /> */}
+            <Navbar />
+            <Route path="/auth/login" element={<LoginMain />}/>
+            {/* <Route path="/auth/signup" element={<Signup />} /> */}
+            
+            
           </Route>
           <Route path="/dashboard" element={<DashBoard />} />
 

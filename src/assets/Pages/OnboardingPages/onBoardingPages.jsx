@@ -8,6 +8,11 @@ import { btns } from '../../data/onBoardingData/btns';
 
 const OnBoardingPage = () =>{
 
+  const CustomNextArrow = (props) => {
+    const { onClick } = props;
+    return <button onClick={onClick} className='next'></button>;
+  };
+
     const settings = {
         dots: true,
         infinite: true,
@@ -16,6 +21,7 @@ const OnBoardingPage = () =>{
         slidesToScroll: 1,
         autoplay: false,
         autoplaySpeed: 1000,
+        // nextArrow: <CustomNextArrow />,
       };
 
   
