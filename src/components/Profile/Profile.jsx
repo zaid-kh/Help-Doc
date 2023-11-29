@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Navigation } from "../Navigation";
+import { Link } from "react-router-dom";
 
 /** temp user object for UI creation purposes only */
 const user = {
@@ -24,10 +25,10 @@ export const Profile = () => {
           {loggedIn ? <h3>{user.name}</h3> : <h3>name</h3>}
         </section>
         {/* //todo: replace with icon */}
-
-        {/* <button>
+        <button>
+          edit
           <Link to="/profileEdit">Edit</Link>
-        </button> */}
+        </button>
         <Navigation />
       </div>
     </>
