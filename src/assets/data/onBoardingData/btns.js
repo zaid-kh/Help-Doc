@@ -2,11 +2,13 @@
 
 export const btns = [
   {
-      classN: "nextBtn",
+      id: "nextBtn",
+      classN:"Bbtn",
       text : "Next"
   },
   {
-      classN: "skipBtn",
+      id: "skipBtn",
+      classN:"Bbtn",
       text : "Skip"
   }
    

@@ -43,7 +43,7 @@ const OnBoardingPage = () =>{
                 
                 btns.map((btn ,index) =>
                 
-                ( <button key = {index} className={btn.classN}>{btn.text}</button>)
+                ( <button key = {index} id = {btn.id}className={btn.classN}>{btn.text}</button>)
                 
                 )
             }

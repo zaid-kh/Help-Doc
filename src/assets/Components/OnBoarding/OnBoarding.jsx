@@ -8,8 +8,10 @@ function OnBoarding({img , title , description , btns}) {
       <>
       <div>
        <img className= "onBoardingImgs" src= {img} alt= "onBoarding img"/>
+       <div className="contentBoarding">
        <h2 className="title">{title}</h2>
        <p className="description">{description}</p>
+       </div>
        </div>
     
       
