@@ -1,5 +1,48 @@
-#root {
-  
-  
+#root {}
+
+body {
+  margin: 0;
 }
 
+body {
+  margin: 0;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #eceaea;
+  padding: 10px 0;
+}
+
+.icons-list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.icons-list li {
+  flex: 1;
+  text-align: center;
+}
+
+.icons-list a {
+  display: block;
+  padding: 10px;
+  color: #6060e7;
+  text-decoration: none;
+}
+
+.icons-list a svg {
+  width: 1.7em;
+  height: 1.7em;
+}
