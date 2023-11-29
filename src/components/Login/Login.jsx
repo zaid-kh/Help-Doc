@@ -1,19 +1,27 @@
 import React, { useEffect, useState, useRef } from "react";
+import { useHistory } from "react-router-dom";
 
 export default function Login() {
     const url = "https://6566fd1464fcff8d730f82fe.mockapi.io/users";
     const [usersData, setUsersData] = useState([]);
     const email = useRef();
     const password = useRef();
+    const history = useHistory();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if(email.current && password.current){
-            const emailexist = usersData.find(user => user.email === email.current.value)
-            const passwordexist = usersData.find(user => user.password === password.current.value)
-            console.log(emailexist,passwordexist);
+        if (email.current && password.current) {
+            const emailexist = usersData.find(
+                (user) => user.email === email.current.value
+            );
+            const passwordexist = usersData.find(
+                (user) => user.password === password.current.value
+            );
+            console.log(emailexist, passwordexist);
+            if (emailexist && passwordexist) {
+                history.push("/dashboard");
+            }
         }
-
     };
     useEffect(() => {
         const fetchData = async () => {
