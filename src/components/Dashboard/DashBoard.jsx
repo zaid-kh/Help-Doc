@@ -1,7 +1,11 @@
 import React from 'react'
+import { Navigation } from '../Navigation'
 
 export default function DashBoard() {
   return (
-    <div>DashBoard</div>
+    <div>DashBoard
+
+      <Navigation/>
+    </div>
   )
 }
