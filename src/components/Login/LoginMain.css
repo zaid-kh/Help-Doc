@@ -1,0 +1,62 @@
+.login-register-container {
+    width: 375px;
+    height: 812px;
+    background-color: #f9f9fe;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+.top-buttons-container {
+    width: 100%;
+    height: 58px;
+
+    position: relative;
+}
+.login-register-btn {
+    width: 167px;
+    height: 33px;
+    top: 12px;
+    left: 24px;
+    display: flex;
+    gap: 8px;
+    position: relative;
+}
+.login-register-btn .btn {
+    height: 33px;
+    border-radius: 6px;
+    border: 1px;
+    padding: 8px 16px;
+    background-color: #fff;
+    color: #0d53fc;
+}
+#login-btn {
+    width: 70px;
+}
+
+.active {
+    border: 1px solid #0d53fc;
+}
+.login-form-container {
+    width: 100%;
+}
+#login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+input {
+    height: 48px;
+}
+
+h1 {
+    text-align: left;
+}
+input[type=submit]{
+    background-color: #0d53fc;
+    border-radius: 6px;
+    border: none;
+}
+input[type=submit]:hover{
+    background-color: #0b48d4;
+}
