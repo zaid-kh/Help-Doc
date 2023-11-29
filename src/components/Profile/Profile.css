@@ -110,9 +110,10 @@ input[type="submit"]:hover {
 }
 
 .user-section {
-    background-color: azure;
-    width: 100%;
+    background-color: #ebebfe;
+    width: 90%;
     height: 15dvh;
+    padding: 0 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
