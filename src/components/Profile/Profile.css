@@ -111,3 +111,18 @@ input[type="submit"]:hover {
     justify-content: center;
     align-items: center;
 }
+
+.user-section {
+    background-color: azure;
+    width: 100%;
+    height: 15dvh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-section img {
+    width: 30%;
+    position: relative;
+    left: 0;
+}

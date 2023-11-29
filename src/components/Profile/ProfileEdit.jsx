@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./Profile.css";
+import { Link } from "react-router-dom";
+
 /** temp user object for UI creation purposes only */
 
 const user = {
@@ -49,11 +51,11 @@ export const ProfileEdit = () => {
   return (
     <>
       <section className="profile-header">
-        {/* //todo: use route */}
-
-        <a href="#">
-          <i id="backIcon">◀</i>
-        </a>
+        <p href="#">
+          <i id="backIcon">
+            <Link to="/profile">◀</Link>
+          </i>
+        </p>
         <h3 id="title">Personal Data</h3>
         <button id="saveButton" type="submit" value="Submit" onClick={saveEdit}>
           Save

@@ -8,6 +8,7 @@ import { BrowserRouter } from "react-router-dom";
 import Appointments from "./components/Appointments/Appointments";
 import OnBoardingPage from "./assets/Pages/OnboardingPages/onBoardingPages";
 import { Profile } from "./components/Profile/Profile";
+import { ProfileEdit } from "./components/Profile/ProfileEdit";
 function App() {
   return (
     <>
@@ -23,6 +24,7 @@ function App() {
           <Route path="/dashboard" element={<DashBoard />} />
 
           <Route path="/profile" element={<Profile />} />
+          <Route path="/profileEdit" element={<ProfileEdit />} />
           <Route path="/appointments" element={<Appointments />}>
             {/* <Appointments /> */}
             {/* <Navigation /> */}
