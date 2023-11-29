@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from "./components/Auth/Navbar";
 import { Navigation } from "./components/Navigation";
 
@@ -9,7 +9,7 @@ function App() {
     <>
     <Router>
       <div className="App">
-        <Switch>
+        <Routes>
           <Route exact path="/" component={Home} />
           {/* <Link to="/auth/login">Login</Link> */}
           <Route path="/auth">
@@ -33,7 +33,7 @@ function App() {
               <Profile />
               <Navigation />
             </Route>
-        </Switch>
+        </Routes>
       </div>
     </Router>
     </>
@@ -42,10 +42,10 @@ function App() {
 
 const AuthRoutes = () => {
   return (
-    <Switch>
+    <Routes>
       <Route path="/auth/login" component={Login} />
       <Route path="/auth/signup" component={Signup} />
-    </Switch>
+    </Routes>
   );
 };
 
