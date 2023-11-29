@@ -1,20 +1,39 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Profile.css";
-/** temp user object for UI creation purposes only */
-
-const user = {
-  name: "name 1",
-  email: "email 1",
-  password: "password 1",
-  dateOfBirth: "2000-01-01",
-  phoneNum: "phoneNum 1",
-  address: "address 1",
-  img: "img 1",
-  id: "1",
-};
+import { Link } from "react-router-dom";
 
 export const ProfileEdit = () => {
-  const [editedUser, setEditedUser] = useState({ ...user });
+  // todo: get userID from context/local storage
+  const [editedUser, setEditedUser] = useState({
+    name: "",
+    dateOfBirth: "",
+    phoneNum: "",
+    address: "",
+    img: "",
+    id: 1,
+  });
+  // fetch user on load
+  useEffect(() => {
+    const fetchUser = async () => {
+      try {
+        const response = await fetch(
+          `https://6566fd1464fcff8d730f82fe.mockapi.io/users/${editedUser.id}`
+        );
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch user data");
+        }
+
+        const userData = await response.json();
+        setEditedUser(userData);
+      } catch (error) {
+        console.error("Error fetching user data:", error.message);
+      }
+    };
+
+    // Fetch user data when the component mounts
+    fetchUser();
+  }, [editedUser.id]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -49,20 +68,26 @@ export const ProfileEdit = () => {
   return (
     <>
       <section className="profile-header">
-        {/* //todo: use route */}
-
-        <a href="#">
-          <i id="backIcon">◀</i>
-        </a>
+        <p href="#">
+          <i id="backIcon">
+            <Link to="/profile">◀</Link>
+          </i>
+        </p>
         <h3 id="title">Personal Data</h3>
         <button id="saveButton" type="submit" value="Submit" onClick={saveEdit}>
           Save
         </button>
       </section>
-      <section className="image-container">
-        <img className="profile-image" src={editedUser.img} alt="user image" />
-        <button className="edit-button">&#9998;</button>
-      </section>
+      <div className="center-div">
+        <section className="image-container">
+          <img
+            className="profile-image"
+            src={editedUser.img}
+            alt="user image"
+          />
+          <button className="edit-button">&#9998;</button>
+        </section>
+      </div>
       <form id="editForm">
         <label htmlFor="name">Name</label>
         <input
