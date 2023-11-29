@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Navigation } from '../Navigation'
 
 /** temp user object for UI creation purposes only */
 const user = {
@@ -22,6 +23,7 @@ export const Profile = () => {
         <section className="profile-greeting">
           {loggedIn ? <h3>{user.name}</h3> : <h3>name</h3>}
         </section>
+        <Navigation />
       </div>
     </>
   );
