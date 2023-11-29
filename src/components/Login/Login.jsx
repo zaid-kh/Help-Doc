@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
     const url = "https://6566fd1464fcff8d730f82fe.mockapi.io/users";
     const [usersData, setUsersData] = useState([]);
     const email = useRef();
     const password = useRef();
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -19,7 +19,7 @@ export default function Login() {
             );
             console.log(emailexist, passwordexist);
             if (emailexist && passwordexist) {
-                history.push("/dashboard");
+                navigate("/dashboard");
             }
         }
     };
