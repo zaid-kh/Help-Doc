@@ -6,13 +6,15 @@ import LoginMain from "./components/Login/LoginMain";
 import DashBoard from "./components/Dashboard/DashBoard";
 import { BrowserRouter } from "react-router-dom";
 import Appointments from "./components/Appointments/Appointments";
+import OnBoardingPage from "./assets/Pages/OnboardingPages/onBoardingPages";
 function App() {
     return (
         <>
             <BrowserRouter>
                 <Routes>
-                    {/* <Route exact path="/" element={<Home/>} /> */}
-                    {/* <Link to="/auth/login">Login</Link> */}
+                    <Route exact path="/" element={<OnBoardingPage/>} />
+                    
+                    <Link to="/auth/login">Login</Link>
                     <Route path="/auth">
                         <Route path="/auth/login" element={<LoginMain />} />
                         {/* <AuthRoutes /> */}
