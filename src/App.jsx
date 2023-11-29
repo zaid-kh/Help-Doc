@@ -9,6 +9,8 @@ import Appointments from "./components/Appointments/Appointments";
 import OnBoardingPage from "./assets/Pages/OnboardingPages/onBoardingPages";
 import { Profile } from "./components/Profile/Profile";
 import { ProfileEdit } from "./components/Profile/ProfileEdit";
+import Login from "./components/Login/Login";
+import Register from "./components/Login/Register";
 function App() {
   return (
     <>
@@ -17,9 +19,11 @@ function App() {
           <Route exact path="/" element={<OnBoardingPage />} />
 
           {/* <Link to="/auth/login">Login</Link> */}
-          <Route path="/auth">
-            <Route path="/auth/login" element={<LoginMain />} />
+          <Route path="/auth" element={<LoginMain />}>
+            {/* <Navbar/> */}
             {/* <AuthRoutes /> */}
+            <Route path="/auth/login" element={<Login />} />
+            <Route path="/auth/register" element={<Register />} />
           </Route>
           <Route path="/dashboard" element={<DashBoard />} />
 

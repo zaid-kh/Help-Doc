@@ -1,6 +1,7 @@
 .onBoardingImgs {
     height:272px;
     width: 353px;
+    margin-bottom: 32px;
   }
 
   .title {
@@ -9,7 +10,8 @@
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
-    line-height: 150%;
+   
+
    
   }
   .description {
@@ -18,13 +20,16 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 24px */
+ 
   }
 
   .contentBoarding{
+    padding: 0 16px;
     display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
+    height: 104px;
+    width: 317px;
+    margin-bottom: 82px;
   }
 
-  

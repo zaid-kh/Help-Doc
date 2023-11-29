@@ -4,12 +4,14 @@ export const btns = [
   {
       id: "nextBtn",
       classN:"Bbtn",
-      text : "Next"
+      text : "Next",
+      func: "next()"
   },
   {
       id: "skipBtn",
       classN:"Bbtn",
-      text : "Skip"
+      text : "Skip",
+      func: "skip()"
   }
    
 ]

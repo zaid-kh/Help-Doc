@@ -1,6 +1,9 @@
 import React from 'react'
 
 export default function Register() {
+    const handleSubmit = () =>{
+        
+    }
   return (
     <div className='register-form-container'>
         <h1>
