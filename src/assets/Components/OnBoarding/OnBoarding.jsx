@@ -3,7 +3,6 @@ import './OnBoarding.css'
 
 
 function OnBoarding({img , title , description , btns}) {
-    console.log(btns);
     return (
       <>
       <div>
