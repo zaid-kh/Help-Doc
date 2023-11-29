@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { CiMail } from "react-icons/ci";
 
 export default function Login() {
     const url = "https://6566fd1464fcff8d730f82fe.mockapi.io/users";
@@ -7,7 +8,7 @@ export default function Login() {
     const email = useRef();
     const password = useRef();
     const navigate = useNavigate();
-
+    const [invalidInput, setInvalidInput] = useState(false);
     const handleSubmit = (e) => {
         e.preventDefault();
         if (email.current && password.current) {
@@ -20,6 +21,9 @@ export default function Login() {
             console.log(emailexist, passwordexist);
             if (emailexist && passwordexist) {
                 navigate("/dashboard");
+            } else {
+                console.log("invalid input", invalidInput);
+                setInvalidInput((prev) => !prev);
             }
         }
     };
@@ -28,7 +32,6 @@ export default function Login() {
             try {
                 const response = await fetch(url);
                 const result = await response.json();
-                console.log(result);
                 setUsersData(result);
             } catch (error) {
                 console.log(error);
@@ -51,6 +54,7 @@ export default function Login() {
                     name="useremail"
                     id="email-input"
                     placeholder="Email"
+                    className={invalidInput ? "invalidInput" : ""}
                 />
                 <input
                     ref={password}
@@ -58,8 +62,11 @@ export default function Login() {
                     name="userpassword"
                     id="password-input"
                     placeholder="Password"
+                    className={invalidInput ? "invalidInput" : ""}
                 />
-                <a className="forgot-password" href="">Forgot your password?</a>
+                <a className="forgot-password" href="">
+                    Forgot your password?
+                </a>
                 <input type="submit" value="Login" />
             </form>
         </div>
