@@ -7,39 +7,41 @@ import DashBoard from "./components/Dashboard/DashBoard";
 import { BrowserRouter } from "react-router-dom";
 import Appointments from "./components/Appointments/Appointments";
 import OnBoardingPage from "./assets/Pages/OnboardingPages/onBoardingPages";
+import { Profile } from "./components/Profile/Profile";
 function App() {
-    return (
-        <>
-            <BrowserRouter>
-                <Routes>
-                    <Route exact path="/" element={<OnBoardingPage/>} />
-                    
-                    <Link to="/auth/login">Login</Link>
-                    <Route path="/auth">
-                        <Route path="/auth/login" element={<LoginMain />} />
-                        {/* <AuthRoutes /> */}
-                    </Route>
-                    <Route path="/dashboard" element={<DashBoard />} />
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<OnBoardingPage />} />
 
-                    <Route path="/appointments" element={<Appointments />}>
-                        {/* <Appointments /> */}
-                        {/* <Navigation /> */}
-                    </Route>
-                </Routes>
-            </BrowserRouter>
-        </>
-    );
+          {/* <Link to="/auth/login">Login</Link> */}
+          <Route path="/auth">
+            <Route path="/auth/login" element={<LoginMain />} />
+            {/* <AuthRoutes /> */}
+          </Route>
+          <Route path="/dashboard" element={<DashBoard />} />
+
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/appointments" element={<Appointments />}>
+            {/* <Appointments /> */}
+            {/* <Navigation /> */}
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
 }
 
 const AuthRoutes = () => {
-    return (
-        <BrowserRouter>
-            <Routes>
-                {/* <Route path="/auth/login" element={<LoginMain />} /> */}
-                {/* <Route path="/auth/signup" element={<Signup />} /> */}
-            </Routes>
-        </BrowserRouter>
-    );
+  return (
+    <BrowserRouter>
+      <Routes>
+        {/* <Route path="/auth/login" element={<LoginMain />} /> */}
+        {/* <Route path="/auth/signup" element={<Signup />} /> */}
+      </Routes>
+    </BrowserRouter>
+  );
 };
 
 export default App;
