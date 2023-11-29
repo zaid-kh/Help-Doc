@@ -15,10 +15,6 @@
     "react-icons": "^4.12.0",
     "react-router-dom": "^6.20.0",
     "react-slick": "^0.29.0",
-<<<<<<< HEAD
-    "react-svg": "^16.1.31",
-=======
->>>>>>> 25e5c2486c7838cee21f55cb85ad0eec9cf16a4e
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
