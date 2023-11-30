@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { CiMail } from "react-icons/ci";
 import { RiLockPasswordLine } from "react-icons/ri";
+import LoginUsingSocialMedia from "./LoginUsingSocialMedia";
 function emailValidation(mailInput, setRegisterError) {
     const re = new RegExp(
         /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -128,7 +129,7 @@ export default function Register() {
             }
         }
 
-        console.log(registerError);
+        // console.log(registerError);
     };
 
     useEffect(() => {
@@ -193,12 +194,13 @@ export default function Register() {
                     />
                 </div>
                 <input type="submit" value="Register" />
-            </form>
+                <LoginUsingSocialMedia/>
             {registerError ? (
                 <p className="error-msg">{registerError}</p>
             ) : (
                 <p></p>
             )}
+            </form>
         </div>
     );
 }
