@@ -66,6 +66,7 @@ form input[type='email'],input[type='password'] {
 
 .login-form-container h1 {
     text-align: left;
+    color: #0F0F0F;
 }
 form input[type="submit"] {
     height: 48px;
@@ -95,4 +96,9 @@ form input[type="submit"] {
 }
 .register-form-container h1{
     text-align: left;
+    color: #0F0F0F;
+}
+
+.invalidInput{
+    background-color: rgba(155,0, 0, 0.3) !important;
 }
