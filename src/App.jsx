@@ -10,7 +10,11 @@ import OnBoardingPage from "./assets/Pages/OnboardingPages/onBoardingPages";
 import { Profile } from "./components/Profile/Profile";
 import Login from "./components/Login/Login";
 import Register from "./components/Login/Register";
+import AppointmentPicker from "./assets/Components/Appoitment/Appointment";
+import DoctorCard from "./assets/Components/Cards/Card";
+
 function App() {
+  const sta = false;
     return (
         <>
             <BrowserRouter>
@@ -21,9 +25,9 @@ function App() {
                     <Route path="/auth" element={<LoginMain />}>
                         {/* <Navbar/> */}
                         {/* <AuthRoutes /> */}
+                    </Route>
                         <Route path="/auth/login" element={<Login />} />
                         <Route path="/auth/register" element={<Register />} />
-                    </Route>
                     <Route path="/dashboard" element={<DashBoard />} />
 
                     <Route path="/profile" element={<Profile />} />
