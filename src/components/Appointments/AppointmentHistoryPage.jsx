@@ -5,7 +5,7 @@ import AppointmentHistoryCard from "./AppointmentHistoryCard";
 export default function AppointmentHistoryPage() {
   return (
     <div>
-      <AppointmentHistoryButton />
+      {/* <AppointmentHistoryButton /> */}
       <AppointmentHistoryCard />
     </div>
   );

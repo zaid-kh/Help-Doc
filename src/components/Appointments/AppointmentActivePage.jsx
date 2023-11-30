@@ -6,7 +6,7 @@ import AppointmentActiveCard from "./AppointmentActiveCard";
 const AppointmentsActivePage = () => {
   return (
     <div>
-      <AppointmentActiveButtons />
+      {/* <AppointmentActiveButtons /> */}
       <AppointmentActiveCard />
     </div>
   );
