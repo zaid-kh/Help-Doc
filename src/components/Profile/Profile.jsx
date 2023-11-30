@@ -2,25 +2,50 @@ import React, { useState } from "react";
 import { Navigation } from "../Navigation";
 import { Link } from "react-router-dom";
 import IconContainer from "./IconContainer";
-import { CgProfile } from "react-icons/cg";
+import { CgBell, CgFileDocument, CgProfile } from "react-icons/cg";
+import { LuShieldCheck } from "react-icons/lu";
+import { GoQuestion } from "react-icons/go";
+import { IoAlertCircleOutline } from "react-icons/io5";
+
 import Heading from "../Heading/Heading";
 
 const user = JSON.parse(sessionStorage.getItem("user"));
 console.log("user: ", user);
 
-const itemsList = [
+const personalItemsList = [
   {
     icon: <CgProfile />,
-    text: "Item 1",
+    text: "Account",
+    route: "/profileEdit",
+  },
+  {
+    icon: <CgFileDocument />,
+    text: "Personal Data",
+    route: "/profileEdit",
+  },
+];
+const generalItemsList = [
+  {
+    icon: <CgBell />,
+    text: "Notifications",
     route: "/profile",
   },
   {
-    icon: <CgProfile />,
-    text: "Item 2",
+    icon: <LuShieldCheck />,
+    text: "Security",
+    route: "/profile",
+  },
+  {
+    icon: <GoQuestion />,
+    text: "Help",
+    route: "/profile",
+  },
+  {
+    icon: <IoAlertCircleOutline />,
+    text: "About",
     route: "/profile",
   },
 ];
-
 export const Profile = () => {
   const [loggedIn, setLoggedIn] = useState(true);
 
@@ -41,8 +66,8 @@ export const Profile = () => {
           <Navigation />
         </div>
 
-        <IconContainer title="Personal" items={itemsList} />
-        <IconContainer title="General" items={itemsList} />
+        <IconContainer title="Personal" items={personalItemsList} />
+        <IconContainer title="General" items={generalItemsList} />
       </div>
     </>
   );
