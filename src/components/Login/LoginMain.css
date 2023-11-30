@@ -2,18 +2,15 @@
     width: 375px;
     height: 812px;
     background-color: #f9f9fe;
-    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
+    padding: 13px;
     border: 1px solid black;
 }
 .top-buttons-container {
     width: 100%;
     height: 58px;
-
+    padding: 13px;
     position: relative;
 }
 .login-register-btn {
@@ -48,25 +45,40 @@
     background-color: #f9f9fe;
 }
 .login-form-container {
-    width: 100%;
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+   
 }
 #login-form {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 32px;
+    position: relative;
+    width: 100% !important;
+    margin: 0;
+    padding: 0 13px;
+    
 }
-form input[type='email'],input[type='password'] {
+form input[type='email'],input[type='password'],input[type='text'] {
     height: 48px;
     color: black;
     background-color: #f9f9fe;
     border-radius: 6px;
     border: 1px solid #cdcaca;
-    padding-left: 16px;
+    width: 100% !important;
+    
 }
 
 .login-form-container h1 {
+    position: relative;
+    margin-left: 24px;
     text-align: left;
     color: #0F0F0F;
+    width: 96px !important;
+    height: 154px !important;
+    
 }
 form input[type="submit"] {
     height: 48px;
@@ -79,13 +91,20 @@ form input[type="submit"] {
 }
 
 .register-form-container {
-    width: 100%;
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
 }
 
 #register-form {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 32px;
+    position: relative;
+    width: 100% !important;
+    margin: 0;
+    padding: 0 13px;
 }
 .forgot-password{
     text-align: right;
@@ -95,8 +114,12 @@ form input[type="submit"] {
     text-decoration: none;
 }
 .register-form-container h1{
+    position: relative;
+    margin-left: 24px;
     text-align: left;
     color: #0F0F0F;
+    width: 96px !important;
+    height: 154px !important;
 }
 
 .invalidInput{
@@ -105,6 +128,21 @@ form input[type="submit"] {
 
 .error-msg{
     text-align: center;
-    width: 100%;
+    width: 100% !important;
     color: rgba(155,0, 0, 0.6);
+}
+
+.input-container{
+    width: 100% !important;
+    height: 48px;
+    position: relative;
+
+}
+.input-container .icon{
+    width: 24px ;
+    height: 24px;
+    position: absolute;
+    right: 16px;
+    top: 30%;
+    color: #8d8d8d;
 }
