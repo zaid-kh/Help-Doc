@@ -5,7 +5,7 @@ import IconContainer from "./IconContainer";
 import { CgBell, CgFileDocument, CgProfile } from "react-icons/cg";
 import { LuShieldCheck } from "react-icons/lu";
 import { GoQuestion } from "react-icons/go";
-import { IoAlertCircleOutline } from "react-icons/io5";
+import { IoAlertCircleOutline, IoLogOutOutline } from "react-icons/io5";
 
 import Heading from "../Heading/Heading";
 
@@ -48,6 +48,19 @@ const generalItemsList = [
 ];
 export const Profile = () => {
   const [loggedIn, setLoggedIn] = useState(true);
+  function signOut() {
+    sessionStorage.clear();
+    console.log("session cleared");
+  }
+  function LogOut() {
+    return (
+      <>
+        <Link to={"/"}>
+          <IoLogOutOutline onClick={signOut} />
+        </Link>
+      </>
+    );
+  }
 
   return (
     <>
@@ -58,11 +71,7 @@ export const Profile = () => {
           <section className="profile-greeting">
             {loggedIn ? <h3>{user.name}</h3> : <h3>name</h3>}
           </section>
-          {/* //todo: replace with logout icon and logout functionality */}
-          <button>
-            <Link to="/profileEdit">Edit</Link>
-          </button>
-
+          <LogOut />
           <Navigation />
         </div>
 
