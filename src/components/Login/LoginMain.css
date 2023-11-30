@@ -102,3 +102,9 @@ form input[type="submit"] {
 .invalidInput{
     background-color: rgba(155,0, 0, 0.3) !important;
 }
+
+.error-msg{
+    text-align: center;
+    width: 100%;
+    color: rgba(155,0, 0, 0.6);
+}
