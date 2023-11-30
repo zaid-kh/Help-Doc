@@ -15,11 +15,10 @@ export default function Login() {
             const emailexist = usersData.find(
                 (user) => user.email === email.current.value
             );
-            const passwordexist = usersData.find(
-                (user) => user.password === password.current.value
-            );
-            console.log(emailexist, passwordexist);
-            if (emailexist && passwordexist) {
+            const passwordCorrect =
+                emailexist.password === password ? true : false;
+            console.log(emailexist, passwordCorrect);
+            if (emailexist && passwordCorrect) {
                 navigate("/dashboard");
             } else {
                 console.log("invalid input", invalidInput);
@@ -31,10 +30,14 @@ export default function Login() {
         const fetchData = async () => {
             try {
                 const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error("Failed to fetch user data");
+                }
                 const result = await response.json();
                 setUsersData(result);
+                console.log(usersData);
             } catch (error) {
-                console.log(error);
+                console.log("Error fetching user data", error);
             }
         };
         fetchData();
