@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { CiMail } from "react-icons/ci";
 
 export default function Login() {
   const url = "https://6566fd1464fcff8d730f82fe.mockapi.io/users";
@@ -7,7 +8,7 @@ export default function Login() {
   const email = useRef();
   const password = useRef();
   const navigate = useNavigate();
-
+  const [invalidInput, setInvalidInput] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
     if (email.current && password.current) {
@@ -22,6 +23,9 @@ export default function Login() {
         // save id from emailexist object (retrieved user object) to session
         sessionStorage.setItem("user", JSON.stringify(emailexist));
         navigate("/dashboard");
+      } else {
+        console.log("invalid input", invalidInput);
+        setInvalidInput((prev) => !prev);
       }
     }
   };
@@ -30,7 +34,6 @@ export default function Login() {
       try {
         const response = await fetch(url);
         const result = await response.json();
-        console.log(result);
         setUsersData(result);
       } catch (error) {
         console.log(error);
