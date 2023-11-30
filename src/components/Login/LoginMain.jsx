@@ -4,6 +4,7 @@ import LoginNav from "./LoginNav";
 import Login from "./Login";
 import Register from "./Register";
 import Navbar from "../Auth/Navbar";
+import LoginUsingSocialMedia from "./LoginUsingSocialMedia";
 
 export default function LoginMain() {
     const [isLogin,setIsLogin] = useState(true)
@@ -12,6 +13,7 @@ export default function LoginMain() {
             <LoginNav isLogin={isLogin} setIsLogin={setIsLogin}  />
             {/* <Navbar/> */}
             {isLogin ? <Login  /> : <Register/>}
+            
         </main>
     );
 }
