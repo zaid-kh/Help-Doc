@@ -3,6 +3,7 @@ import { Navigation } from "../Navigation";
 import { Link } from "react-router-dom";
 import IconContainer from "./IconContainer";
 import { CgProfile } from "react-icons/cg";
+import Heading from "../Heading/Heading";
 
 const user = JSON.parse(sessionStorage.getItem("user"));
 console.log("user: ", user);
@@ -26,6 +27,7 @@ export const Profile = () => {
   return (
     <>
       <div>
+        <Heading text="My Profile" />
         <div className="user-section">
           <img src={user.img} id="profile-image" alt="user image" />
           <section className="profile-greeting">
