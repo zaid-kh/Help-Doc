@@ -3,19 +3,10 @@ import { Navigation } from "../Navigation";
 import { Link } from "react-router-dom";
 
 /** temp user object for UI creation purposes only */
-const user = {
-  name: "name 1",
-  email: "email 1",
-  password: "password 1",
-  dateOfBirth: 1701250340,
-  phoneNum: "phoneNum 1",
-  address: "address 1",
-  img: "img 1",
-  id: "1",
-};
-
+const user = JSON.parse(sessionStorage.getItem("user"));
+console.log("user: ", user);
 export const Profile = () => {
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(true);
 
   return (
     <>
@@ -24,7 +15,7 @@ export const Profile = () => {
         <section className="profile-greeting">
           {loggedIn ? <h3>{user.name}</h3> : <h3>name</h3>}
         </section>
-        {/* //todo: replace with icon */}
+        {/* //todo: replace with logout icon and logout functionality */}
         <button>
           edit
           <Link to="/profileEdit">Edit</Link>

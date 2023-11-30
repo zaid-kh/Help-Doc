@@ -1,17 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./Profile.css";
 import { Link } from "react-router-dom";
-
+const user = JSON.parse(sessionStorage.getItem("user"));
 export const ProfileEdit = () => {
-    // todo: get userID from context/local storage
-    const [editedUser, setEditedUser] = useState({
-        name: "",
-        dateOfBirth: "",
-        phoneNum: "",
-        address: "",
-        img: "",
-        id: 1,
-    });
+    const [editedUser, setEditedUser] = useState(user);
     // fetch user on load
     useEffect(() => {
         const fetchUser = async () => {
