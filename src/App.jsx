@@ -10,6 +10,7 @@ import { Profile } from "./components/Profile/Profile";
 import { ProfileEdit } from "./components/Profile/ProfileEdit";
 import Login from "./components/Login/Login";
 import Register from "./components/Login/Register";
+
 function App() {
   return (
     <>
