@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { CiMail } from "react-icons/ci";
+import { RiLockPasswordLine } from "react-icons/ri";
+import LoginUsingSocialMedia from "./LoginUsingSocialMedia";
 function emailValidation(mailInput, setRegisterError) {
     const re = new RegExp(
         /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -50,6 +52,7 @@ function passwordConfirmation(mainPass, confirmPass, setRegisterError) {
 }
 
 export default function Register() {
+    const [showPassword, setShowPassword] = useState(false);
     const url = "https://6566fd1464fcff8d730f82fe.mockapi.io/users";
     const [usersData, setUsersData] = useState([]);
     const [newUser, setNewUser] = useState({
@@ -119,13 +122,14 @@ export default function Register() {
                 emailInput.current.value = "";
                 passwordInput.current.value = "";
                 confirmPasswordInput.current.value = "";
+                sessionStorage.setItem("user", JSON.stringify(result));
                 navigate("/dashboard");
             } catch (error) {
                 console.log("Error", error);
             }
         }
 
-        console.log(registerError);
+        // console.log(registerError);
     };
 
     useEffect(() => {
@@ -149,39 +153,54 @@ export default function Register() {
 
     return (
         <div className="register-form-container">
-            <h1>
-                Create <br />
-                Account
-            </h1>
+            <h1>Create Account</h1>
             <form id="register-form" onSubmit={handleRegisterSubmit}>
-                <input
-                    ref={emailInput}
-                    type="email"
-                    name="useremail"
-                    id="email-input"
-                    placeholder="Email"
-                />
-                <input
-                    ref={passwordInput}
-                    type="password"
-                    name="userpassword"
-                    id="password-input"
-                    placeholder="Password"
-                />
-                <input
-                    ref={confirmPasswordInput}
-                    type="password"
-                    name="confirmuserpassword"
-                    id="confirm-password-input"
-                    placeholder="Confirm Password"
-                />
+                <div className="input-container">
+                    <CiMail className="icon" />
+                    <input
+                        ref={emailInput}
+                        type="email"
+                        name="useremail"
+                        id="email-input"
+                        placeholder="Email"
+                    />
+                </div>
+                <div className="input-container">
+                    <RiLockPasswordLine
+                        className="icon"
+                        onClick={() => setShowPassword((prev) => !prev)}
+                    />
+
+                    <input
+                        ref={passwordInput}
+                        type={!showPassword ? "password" : "text"}
+                        name="userpassword"
+                        id="password-input"
+                        placeholder="Password"
+                    />
+                </div>
+                <div className="input-container">
+                    <RiLockPasswordLine
+                        className="icon"
+                        onClick={() => setShowPassword((prev) => !prev)}
+                    />
+
+                    <input
+                        ref={confirmPasswordInput}
+                        type={!showPassword ? "password" : "text"}
+                        name="confirmuserpassword"
+                        id="confirm-password-input"
+                        placeholder="Confirm Password"
+                    />
+                </div>
                 <input type="submit" value="Register" />
-            </form>
+                <LoginUsingSocialMedia/>
             {registerError ? (
                 <p className="error-msg">{registerError}</p>
             ) : (
                 <p></p>
             )}
+            </form>
         </div>
     );
 }

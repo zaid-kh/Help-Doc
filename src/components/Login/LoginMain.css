@@ -1,20 +1,18 @@
 .login-register-container {
-    width: 375px;
+    position: relative;
+    width: 375px !important;
     height: 812px;
     background-color: #f9f9fe;
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 8px;
+    align-items: start;
+    padding: 13px;
     border: 1px solid black;
 }
 .top-buttons-container {
-    width: 100%;
+    margin-top: 32px;
     height: 58px;
-
-    position: relative;
 }
 .login-register-btn {
     width: 167px;
@@ -23,7 +21,6 @@
     left: 24px;
     display: flex;
     gap: 8px;
-    position: relative;
 }
 .login-register-btn .btn {
     height: 33px;
@@ -43,68 +40,149 @@
 .btn.active {
     border: 1px solid #0d53fc;
 }
-.btn.inactive{
+.btn.inactive {
     color: #8d8d8d;
     background-color: #f9f9fe;
 }
 .login-form-container {
-    width: 100%;
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    
 }
 #login-form {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    align-items: center;
+    justify-content: start;
+    gap: 16px;
+    min-width: 100%;
+    
+
 }
-form input[type='email'],input[type='password'] {
+form input[type="email"],
+input[type="password"],
+input[type="text"] {
     height: 48px;
     color: black;
     background-color: #f9f9fe;
     border-radius: 6px;
     border: 1px solid #cdcaca;
-    padding-left: 16px;
+    width: 98%;
 }
 
 .login-form-container h1 {
+    position: relative;
+    margin-left: 24px;
     text-align: left;
-    color: #0F0F0F;
+    color: #0f0f0f;
+    width: 96px !important;
+    height: 154px !important;
 }
 form input[type="submit"] {
-    height: 48px;
+    min-height: 48px !important;
     background-color: #0d53fc;
     border-radius: 6px;
     border: none;
+    width: 100%;
 }
 #login-form input[type="submit"]:hover {
     background-color: #0b48d4;
 }
 
 .register-form-container {
-    width: 100%;
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
 }
 
 #register-form {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    align-items: center;
+    justify-content: start;
+    gap: 16px;
+    min-width: 100%;
+    
 }
-.forgot-password{
+.forgot-password {
     text-align: right;
+    position: relative;
     font-weight: 400;
+    right: 0;
     font-size: 14px;
     color: #0d53fc;
     text-decoration: none;
 }
-.register-form-container h1{
+.register-form-container h1 {
+    position: relative;
+    margin-left: 24px;
     text-align: left;
-    color: #0F0F0F;
+    color: #0f0f0f;
+    width: 96px !important;
+    height: 154px !important;
 }
 
-.invalidInput{
-    background-color: rgba(155,0, 0, 0.3) !important;
+.invalidInput {
+    background-color: rgba(155, 0, 0, 0.3) !important;
 }
 
-.error-msg{
+.error-msg {
     text-align: center;
+    width: 100% !important;
+    color: rgba(155, 0, 0, 0.6);
+    margin: 0 auto;
+    font-size: 12px;
+}
+
+.input-container {
+    width: 100% !important;
+    height: 48px;
+    position: relative;
+}
+.input-container .icon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 16px;
+    top: 30%;
+    color: #8d8d8d;
+}
+
+.social-media {
+    margin: 0 auto;
+    width: 211px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+.social-media-text {
+    color: #0f0f0f;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.social-media-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+.sm-icon{
+    width: 24px;
+    height: 24px;
+    box-shadow: 0 0 3px 0 lightslategray;
+    padding: 15px;
+    border-radius: 6px;
+}
+.forgt-password-container{
+    display: flex;
+    justify-content: end;
+    align-items: end;
     width: 100%;
-    color: rgba(155,0, 0, 0.6);
+    
 }

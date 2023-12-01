@@ -3,6 +3,7 @@ import { Navigation } from "../Navigation";
 import "./appointment.css";
 import AppointmentsActivePage from "./AppointmentActivePage";
 import AppointmentsHistoryPage from "./AppointmentHistoryPage";
+import Heading from "../Heading/Heading";
 
 const Appointments = () => {
   const [activeButton, setActiveButton] = useState("active");
@@ -13,7 +14,7 @@ const Appointments = () => {
 
   return (
     <>
-      <h1 id="appointment-title">My Appointment</h1>
+      <Heading text="My Appointments" />
       <div className="appointments-btns-container">
         <button
           id={
