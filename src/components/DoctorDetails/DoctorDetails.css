@@ -1,12 +1,12 @@
 .doctor-details-container {
-    width: 375px;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     gap: 32px;
     align-items: start;
     background-color: #f9f9fe;
-    margin-top: 32px;
+    padding: 13px;
 }
 .back-btn-doc-details {
     background-color: #f9f9fe;
@@ -21,11 +21,11 @@
 }
 .back-icon {
     width: 24px;
-    height: 24px;
-    padding: 4px 8px 4px 7px;
+    height: 36px;
+    /* padding: 4px 8px 4px 7px; */
 }
 .doc-profile {
-    padding: 8px 13px;
+    /* padding: 8px 13px; */
     height: 178px;
     width: 100%;
     display: flex;
@@ -33,11 +33,16 @@
     align-items: center;
     gap: 26px;
 }
-.doc-img {
+.doc-img-container {
     width: 108px;
     height: 162px;
     border-radius: 6px;
     background-color: #333;
+}
+.doc-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
 }
 .doc-info-container {
     display: flex;
@@ -108,8 +113,8 @@
     color: #aaaaaa;
 }
 .experience-icon {
-    width: 20px;
-    height: 20px;
+    width: 36px;
+    height: 36px;
     border-radius: 6px;
     border: 1px solid var(--color-light-grey-dedede, #dedede);
     background: var(--neutral-white-ffffff, #fff);
@@ -117,11 +122,12 @@
 }
 .doc-about {
     width: 100%;
-    padding: 0 13px;
+    /* padding: 0 13px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
+    gap: 16px;
 }
 .profile-doctor {
     color: #0f0f0f;
@@ -130,4 +136,147 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+}
+.schedule-container {
+    height: 140px;
+    width: 100%;
+    /* padding: 13px; */
+}
+.schedule-title {
+    color: #0f0f0f;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.reviews-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 16px;
+}
+.reviews-top-bar {
+    width: 100%;
+    height: 22px;
+    display: flex;
+    /* padding: 13px; */
+    justify-content: space-between;
+    align-items: center;
+}
+.reviews-title {
+    color: #0f0f0f;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.reviews-see-all {
+    color: var(--color-light-blue-0-d-53-fc, #0d53fc);
+    text-align: right;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+}
+.reviews {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+.review {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    box-shadow: 0 0 2px black;
+    padding: 16px;
+    gap: 16px;
+    border-radius: 6px;
+    border: 1px solid var(--color-light-grey-dedede, #dedede);
+    background: #fff;
+}
+.review-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.review-writer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+}
+
+.reviewer-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 6px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+        0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.reviewer-title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+.reviewer-title {
+    color: var(--neutral-black-0-f-0-f-0-f, #0f0f0f);
+
+    /* Inter/Semi Bold - 16 */
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 24px */
+}
+
+.reviewer-subtitle {
+    color: var(--color-light-grey-aaaaaa, #aaa);
+
+    /* Inter / Regular 14 */
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+}
+.review-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    width: 41px;
+    height: 17px;
+}
+.rating-txt {
+    color: var(--color-light-grey-aaaaaa, #aaa);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.review-txt {
+    color: #0f0f0f;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+}
+.no-reviews {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
