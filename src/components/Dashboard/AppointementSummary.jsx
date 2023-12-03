@@ -2,6 +2,7 @@ import React from "react";
 import Toolbar from "../Toolbar/Toolbar";
 import "./summary.css";
 import { IoCall, IoChatbubbleEllipsesOutline, IoMail } from "react-icons/io5";
+import { BottomButton } from "../BottomButton/BottomButton";
 
 function PersonInformation({ isDoctor, PersonObj }) {
   return (
@@ -46,6 +47,10 @@ function PersonInformation({ isDoctor, PersonObj }) {
     </section>
   );
 }
+
+function makeAppointment() {
+  console.log(" in makeAppointment function ");
+}
 export const AppointementSummary = () => {
   return (
     <>
@@ -68,6 +73,10 @@ export const AppointementSummary = () => {
         </section>
         <PersonInformation isDoctor={true} />
         <PersonInformation />
+        <BottomButton
+          text={"Make my appointment"}
+          onClickHandler={makeAppointment}
+        />
       </div>
     </>
   );
