@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import TitleComponent from '../Header/Header';
 import DoctorCard from '../../assets/Components/Cards/Card';
 import Heading from '../Heading/Heading';
 import { Navigation } from '../Navigation';
+import { useNavigate } from "react-router-dom";
 
 
 
 function DashBoard() {
   const [doctors, setDoctors] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,12 +28,16 @@ function DashBoard() {
     fetchData();
   }, []); 
 
+  const handleDoctorClick = (doctor) => {
+    navigate(`/dashboard/${doctor.id}`, { state: { doctor } });
+  };
+
   return (
     <>
       
       <Heading text="My Doctors"/>
       {doctors.map((doctor) => (
-        <div key={doctor.id}>
+        <div key={doctor.id} onClick={() => handleDoctorClick(doctor)}>
           <DoctorCard
             img={doctor.img}
             name={doctor.name}
