@@ -67,9 +67,9 @@ export const Profile = () => {
       <div>
         <Heading text="My Profile" />
         <div className="user-section">
-          <img src={user.img} id="profile-image" alt="user image" />
+          <img src={user?.img} id="profile-image" alt="user image" />
           <section className="profile-greeting">
-            {loggedIn ? <h3>{user.name}</h3> : <h3>name</h3>}
+            {loggedIn ? <h3>{user?.name}</h3> : <h3>name</h3>}
           </section>
           <LogOut />
           <Navigation />
