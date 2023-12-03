@@ -1,0 +1,76 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .date-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .date-cards {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    width: 100%;
+  }
+  
+  .available-times {
+    margin-top: 20px;
+  }
+  
+  .available-times label {
+    font-weight: bold;
+  }
+  
+  .available-times-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  
+  .book-appointment-button {
+    margin-top: 20px;
+  }
+  
+.dateCard{
+    border: '1px solid #ccc';
+    border-radius: '8px';
+    padding: '16px';
+    margin: '8px';
+    min-width: '100px';
+    cursor: 'pointer';
+}
+.date-cards .dateCard .daySec{
+    font-size: '18px';
+     margin-bottom: '8px' 
+}
+.date-cards .dateCard .dateSec{
+    font-size: '24px';
+    font-weight: 'bold'
+}
+.timeButtons{
+    display: flex;
+    width: 169px;
+    border: none;
+    height: 40px;
+    padding: 12px 48px 13px 48px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    background-color: #FFF;
+    color: #8D8D8D;
+    text-align: center;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+
+
+}
