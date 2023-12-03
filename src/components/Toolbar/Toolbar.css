@@ -1,0 +1,25 @@
+.profile-header {
+    padding: 1rem 1rem 0 1rem;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#backIcon {
+    font-style: normal;
+    font-size: 20px;
+    color: black;
+}
+
+#title {
+    font-size: 16px;
+    text-align: center;
+}
+
+#saveButton {
+    border: none;
+    background: none;
+    color: #0D53FC;
+    text-align: right;
+}
