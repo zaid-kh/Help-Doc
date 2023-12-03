@@ -3,9 +3,9 @@ import { Link,useNavigate } from 'react-router-dom';
 import { FiHome } from "react-icons/fi";
 import { CgProfile } from "react-icons/cg";
 import { FaRegHeart } from "react-icons/fa6";
+import LoginMain from "./Login/LoginMain"
 
-
-export const Navigation = () => {
+export const Navigation = ({user}) => {
   const navigate = useNavigate();
 
   return (
@@ -18,7 +18,8 @@ export const Navigation = () => {
         <Link to="/appointments"><FaRegHeart /></Link>
       </li>
       <li>
-        <Link to="/profile"><CgProfile /></Link>
+        {user ?  <Link to="/profile"><CgProfile /></Link> :  <Link to="/auth">Login</Link> }
+       
       </li>
     </ul>
   </nav>
