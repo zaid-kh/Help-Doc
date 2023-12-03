@@ -9,9 +9,6 @@ import { IoAlertCircleOutline, IoLogOutOutline } from "react-icons/io5";
 
 import Heading from "../Heading/Heading";
 
-const user = JSON.parse(sessionStorage.getItem("user"));
-console.log("user: ", user);
-
 const personalItemsList = [
   {
     icon: <CgProfile />,
@@ -48,6 +45,7 @@ const generalItemsList = [
 ];
 export const Profile = () => {
   const [loggedIn, setLoggedIn] = useState(true);
+  const user = JSON.parse(sessionStorage.getItem("user"));
   function signOut() {
     sessionStorage.clear();
     console.log("session cleared");

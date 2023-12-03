@@ -3,8 +3,9 @@ import "./Profile.css";
 import { Link } from "react-router-dom";
 import { IoChevronBackSharp } from "react-icons/io5";
 import Toolbar from "../Toolbar/Toolbar";
-const user = JSON.parse(sessionStorage.getItem("user"));
+
 export const ProfileEdit = () => {
+  const user = JSON.parse(sessionStorage.getItem("user"));
   const [editedUser, setEditedUser] = useState(user);
   // fetch user on load
   useEffect(() => {
@@ -53,8 +54,8 @@ export const ProfileEdit = () => {
       if (!response.ok) {
         throw new Error("Failed to save changes");
       }
-
-      console.log("Save successful");
+      sessionStorage.setItem("user", JSON.stringify(editedUser));
+      alert("Save successful");
     } catch (error) {
       console.error("Error saving changes:", error.message);
     }
