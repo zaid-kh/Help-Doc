@@ -1,0 +1,133 @@
+.doctor-details-container {
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 32px;
+    align-items: start;
+    background-color: #f9f9fe;
+    margin-top: 32px;
+}
+.back-btn-doc-details {
+    background-color: #f9f9fe;
+    border: none;
+}
+.top-bar {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    background-color: #f9f9fe;
+}
+.back-icon {
+    width: 24px;
+    height: 24px;
+    padding: 4px 8px 4px 7px;
+}
+.doc-profile {
+    padding: 8px 13px;
+    height: 178px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 26px;
+}
+.doc-img {
+    width: 108px;
+    height: 162px;
+    border-radius: 6px;
+    background-color: #333;
+}
+.doc-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    height: 100%;
+    gap: 26px;
+}
+.doc-name-profession {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    height: 48px;
+}
+.doc-name {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 150%;
+}
+.doc-profession {
+    color: #aaaaaa;
+}
+.doc-rating-experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    height: 88px;
+    width: 117px;
+    gap: 16px;
+}
+.rating {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+}
+
+.rating-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.rate {
+    color: #0f0f0f;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    gap: 8px;
+}
+.num-of-ratings {
+    color: #aaaaaa;
+}
+.experience {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+}
+.experience-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.exp {
+    color: #aaaaaa;
+}
+.experience-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    border: 1px solid var(--color-light-grey-dedede, #dedede);
+    background: var(--neutral-white-ffffff, #fff);
+    padding: 8px;
+}
+.doc-about {
+    width: 100%;
+    padding: 0 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+.profile-doctor {
+    color: #0f0f0f;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
