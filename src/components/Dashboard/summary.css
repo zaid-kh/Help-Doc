@@ -1,0 +1,34 @@
+.consultation-schedule {
+    width: 90%;
+    margin-left: 5dvw;
+
+}
+
+.consultation-card {
+    padding: 2rem 1rem;
+    background-color: #EBF1F9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 4px;
+}
+
+.consultation-card-time {
+    text-align: end;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.neutral-black {
+    color: #0F0F0F;
+}
+
+.light-gray-1 {
+    color: #8D8D8D;
+}
+
+.light-gray-2 {
+    color: #AAAAAA;
+}

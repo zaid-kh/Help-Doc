@@ -10,6 +10,7 @@ import { Profile } from "./components/Profile/Profile";
 import { ProfileEdit } from "./components/Profile/ProfileEdit";
 import Login from "./components/Login/Login";
 import Register from "./components/Login/Register";
+import { AppointementSummary } from "./components/Dashboard/AppointementSummary";
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
           <Route path="/dashboard" element={<DashBoard />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/profileEdit" element={<ProfileEdit />} />
+          <Route path="/summary" element={<AppointementSummary />} />
+
           <Route path="/appointments" element={<Appointments />} />
         </Routes>
       </BrowserRouter>
