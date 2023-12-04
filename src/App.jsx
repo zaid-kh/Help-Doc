@@ -10,7 +10,8 @@ import { Profile } from "./components/Profile/Profile";
 import { ProfileEdit } from "./components/Profile/ProfileEdit";
 import Login from "./components/Login/Login";
 import Register from "./components/Login/Register";
-import DoctorDetails from './components/Dashboard/Doctor/DoctorDetailes'
+import DoctorDetails from "./components/Dashboard/Doctor/DoctorDetailes";
+import { AppointementSummary } from "./components/Dashboard/AppointementSummary";
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
 
           <Route path="/profile" element={<Profile />} />
           <Route path="/profileEdit" element={<ProfileEdit />} />
+          <Route path="/summary" element={<AppointementSummary />} />
+
           <Route path="/appointments" element={<Appointments />} />
         </Routes>
       </BrowserRouter>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Profile.css";
 import { Link } from "react-router-dom";
 import { IoChevronBackSharp } from "react-icons/io5";
+import Toolbar from "../Toolbar/Toolbar";
 
 export const ProfileEdit = () => {
   const user = JSON.parse(sessionStorage.getItem("user"));
@@ -61,15 +62,13 @@ export const ProfileEdit = () => {
   };
   return (
     <>
-      <section className="profile-header">
-        <Link to="/profile">
-          <IoChevronBackSharp />
-        </Link>
-        <h3 id="title">Personal Data</h3>
-        <button id="saveButton" type="submit" value="Submit" onClick={saveEdit}>
-          Save
-        </button>
-      </section>
+      <Toolbar
+        title="Personal Data"
+        route="/profile"
+        showButton={true}
+        onSaveClick={saveEdit}
+      />
+
       <div className="center-div">
         <section className="image-container">
           <img

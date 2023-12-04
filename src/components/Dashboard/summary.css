@@ -1,0 +1,74 @@
+.cards {
+    width: 90%;
+    margin-left: 5dvw;
+
+}
+
+.person-information-card {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    border: #DEDEDE 1px solid;
+    padding: 0.8rem 0 1.5rem;
+
+}
+
+.person-card-info {
+    display: grid;
+    grid-template-columns: 2fr 5fr auto;
+    row-gap: 0;
+    padding: 0.1rem 1rem;
+    align-items: center;
+    line-height: 0.2rem;
+}
+
+.person-card-image {
+    border-radius: 5px;
+    width: 4rem;
+}
+
+.contact-icon {
+    margin: 0 1em 0 0;
+    padding: 0.5rem;
+    border: #DEDEDE 1px solid;
+    border-radius: 5px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.consultation-card {
+    padding: 2rem 1rem;
+    background-color: #EBF1F9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.horizontal-line {
+    margin: 1rem 1rem;
+}
+
+.consultation-card-time {
+    text-align: end;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.neutral-black {
+    color: #0F0F0F;
+}
+
+.light-gray-1 {
+    color: #8D8D8D;
+}
+
+.light-gray-2 {
+    color: #AAAAAA;
+}
