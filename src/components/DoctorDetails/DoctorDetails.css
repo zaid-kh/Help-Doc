@@ -150,6 +150,12 @@
     font-weight: 600;
     line-height: normal;
 }
+.schedule-container .available-times{
+    display: none;
+}
+.schedule-container .book-appointment-button{
+    display: none;
+}
 .reviews-container {
     width: 100%;
     display: flex;

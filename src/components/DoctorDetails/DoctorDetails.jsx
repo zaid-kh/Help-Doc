@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 import DoctorProfile from "./DoctorProfile";
 import Reviews from "./Reviews";
-
+import AppointmentBooking from "../../assets/Components/AppointmentBooking/AppointmentBooking";
 export default function DoctorDetails({ doctor }) {
     return (
         <div className="doctor-details-container">
@@ -19,10 +19,16 @@ export default function DoctorDetails({ doctor }) {
             </div>
             <DoctorProfile doctor={doctor} />
             <div className="schedule-container">
-            <span className="schedule-title">Schedule</span>
-            {/* DateCards */}
+                <span className="schedule-title">Schedule</span>
+                {/* <AppointmentBooking /> */}
             </div>
-            {doctor.reviews.length > 0 ? <Reviews reviews={doctor.reviews} /> : <div className="no-reviews"><span className="reviews-title">No Reviews</span></div>}
+            {doctor.reviews.length > 0 ? (
+                <Reviews reviews={doctor.reviews} />
+            ) : (
+                <div className="no-reviews">
+                    <span className="reviews-title">No Reviews</span>
+                </div>
+            )}
         </div>
     );
 }

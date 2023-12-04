@@ -10,7 +10,6 @@ const DoctorDetailes = () => {
       {doctor ? (
         <div>
           <DoctorDetails doctor={doctor} /> 
-    
         </div>
       ) : (
         <p>No doctor details found</p>
